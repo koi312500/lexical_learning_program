@@ -104,5 +104,5 @@ venv.bak/
 .mypy_cache/
 
 # made_by_gunwoo7
-*.key
+Key.key
 .sh
