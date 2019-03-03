@@ -9,8 +9,7 @@ meaning_of_word = '\0'
 link_to_opendict_korean = '\0'
 #SETTINGS -->
 import time
-import GET_CODE
-
+import GET_CODE as gc
 
 def Error():
     print("Program detect the error! Exit automatically in 5 seconds")
@@ -20,6 +19,9 @@ def Error():
 def Get_Word_Content():
     global meaning_of_word
     global link_to_opendict_korean
-    GET_CODE.Get_Need_Content()
-    meaning_of_word = GET_CODE.meaning_of_word
-    link_to_opendict_korean = GET_CODE.link_to_opendict_korean
+    gc.Get_Need_Content()
+    meaning_of_word = gc.meaning_of_word
+    link_to_opendict_korean = gc.link_to_opendict_korean
+
+Get_Word_Content()
+print(meaning_of_word)
