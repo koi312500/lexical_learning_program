@@ -5,20 +5,22 @@ import tkinter as tk
 
 win = tk.Tk()
 
-#*** Settings ***#
+#*** wallpaper - Settings ***#
 win.title("Typing-Program_new")
-win.geometry("660x450")
-wall = tk.PhotoImage(file = "pictures_gui.gif")
+win.geometry("768x432")
+wall = tk.PhotoImage(file = "wallpaper-768x432.gif")
 wall_label = tk.Label(image = wall)
-wall_label.place(x = 0, y = 0)
+wall_label.place(x = -2, y = -2)
 #*** Settings ***#
 
 #*** Test code ***#
 def click_me():
     action.configure(text="** I have been clicked")
 
-action = tk.Button(win,text = "Click me!",command=click_me)
+pixel = tk.PhotoImage(file='pixel.gif')
+action = tk.Button(win,text = "Click me!",command=click_me,image=pixel,compound='center')
 action.grid(column=1, row=0)
+action.config(width=100,height=100)
 #*** Test code ***#
 
 win.mainloop()
