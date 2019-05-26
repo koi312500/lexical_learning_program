@@ -1,13 +1,14 @@
-#This control GUI part of Typing_program_new
+#This control GUI part of lexical_learning_program
 
 
 import tkinter as tk
+from tkinter import ttk
 
 win = tk.Tk()
 
 #*** first settings ***#
 #*** wallpaper - Settings ***#
-win.title("Typing-Program_new")
+win.title("lexical_learning_program")
 win.geometry("768x432")
 wall = tk.PhotoImage(file = "pictures\wallpaper-768x432.gif")
 wall_label = tk.Label(image = wall)
@@ -18,6 +19,10 @@ pixel = tk.PhotoImage(file='pictures\pixel.gif') # Use to change to Button size 
 #*** END ***#
 
 
+ttk.Label(win, text='').grid(column=0, row=0)
+action = tk.Button(win,text = "lexical_learning_program start",image=pixel,compound='center') # command=click_me,
+action.grid(column=150,row=150)
+action.config(width=400,height=20)
 
 
 win.mainloop()

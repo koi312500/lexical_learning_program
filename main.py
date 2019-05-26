@@ -1,4 +1,4 @@
-#This program's github site : https://github.com/gunwoo7/Typing_Program_new
+#This program's github site : https://github.com/gunwoo7/lexical_learning_program
 #Please install bs4 by using "pip install bs4"
 #Please install requests by using "pip install requests"
 #수정사항 -> 주소 확인, 오류상황 판단확인 GUI 제작
