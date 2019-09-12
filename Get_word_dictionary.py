@@ -16,13 +16,13 @@ def Get_Key_From_File():
     file = open("Key.key")
     key = file.read()
 
-def Making_URL1():
+def Making_URL1(word):
     global URL1
     if word == -1:
         Error()
     URL1 = "https://opendict.korean.go.kr/api/search?certkey_no=575&key=" + key + "&target_type=search&part=word&q=" + word + "&sort=dict&start=1&num=10"
 
-def Making_URL2():
+def Making_URL2(word):
     global URL2
     if word == -1:
         Error()
@@ -57,13 +57,11 @@ def Found_Content2():
     example_of_word = Content_XML2.example.get_text()
 
 
-def Get_Need_Content():
-    global word
-    word = str(input("Please enter the word You want to search : "))
+def Get_Need_Content(word):
     Get_Key_From_File()
-    Making_URL1()
+    Making_URL1(word)
     Get_XML1()
     Found_Content1()
-    Making_URL2()
+    Making_URL2(word)
     Get_XML2()
     Found_Content2()

@@ -13,13 +13,13 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="Background_image">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>960</width>
-     <height>540</height>
+     <x>-2</x>
+     <y>-2</y>
+     <width>964</width>
+     <height>544</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -42,7 +42,7 @@
     </size>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="show_label1">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -55,7 +55,7 @@
     <string>------------------------------------------------------------------------------------------------------------------------</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="show_label2">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -68,7 +68,7 @@
     <string>에빙하우스의 망각곡선 이론을 활용한 어휘력 끝장내기 - 김건우</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_3">
+  <widget class="QLabel" name="show_label3">
    <property name="geometry">
     <rect>
      <x>500</x>
@@ -81,7 +81,7 @@
     <string>대전교육정보원 부설영재교육원 개인주제탐구발표대회 제출작</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="e_5_button">
    <property name="geometry">
     <rect>
      <x>120</x>
@@ -93,7 +93,7 @@
    <property name="font">
     <font>
      <family>굴림</family>
-     <pointsize>30</pointsize>
+     <pointsize>25</pointsize>
      <weight>50</weight>
      <italic>false</italic>
      <bold>false</bold>
@@ -101,14 +101,21 @@
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(170, 85, 255);
-font: 30pt &quot;굴림&quot;;
+font: 25pt &quot;굴림&quot;;
 color: rgb(85, 255, 0);</string>
    </property>
    <property name="text">
-    <string>초5</string>
+    <string>초등 5
+국어 어휘력</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>20</width>
+     <height>20</height>
+    </size>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="e_6_button">
    <property name="geometry">
     <rect>
      <x>540</x>
@@ -119,14 +126,15 @@ color: rgb(85, 255, 0);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(170, 85, 255);
-font: 30pt &quot;굴림&quot;;
+font: 25pt &quot;굴림&quot;;
 color: rgb(85, 255, 0);</string>
    </property>
    <property name="text">
-    <string>초6</string>
+    <string>초등 6
+국어 어휘력</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_4">
+  <widget class="QPushButton" name="m_1_button">
    <property name="geometry">
     <rect>
      <x>120</x>
@@ -137,14 +145,15 @@ color: rgb(85, 255, 0);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(170, 85, 255);
-font: 30pt &quot;굴림&quot;;
+font: 25pt &quot;굴림&quot;;
 color: rgb(85, 255, 0);</string>
    </property>
    <property name="text">
-    <string>중1</string>
+    <string>중등 1
+국어 어휘력</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_5">
+  <widget class="QPushButton" name="m_2_button">
    <property name="geometry">
     <rect>
      <x>540</x>
@@ -155,14 +164,15 @@ color: rgb(85, 255, 0);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(170, 85, 255);
-font: 30pt &quot;굴림&quot;;
+font: 25pt &quot;굴림&quot;;
 color: rgb(85, 255, 0);</string>
    </property>
    <property name="text">
-    <string>중2</string>
+    <string>중등 2
+국어 어휘력</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_6">
+  <widget class="QPushButton" name="m_3_button">
    <property name="geometry">
     <rect>
      <x>330</x>
@@ -173,11 +183,12 @@ color: rgb(85, 255, 0);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(170, 85, 255);
-font: 30pt &quot;굴림&quot;;
+font: 25pt &quot;굴림&quot;;
 color: rgb(85, 255, 0);</string>
    </property>
    <property name="text">
-    <string>중3</string>
+    <string>중등 3
+국어 어휘력</string>
    </property>
   </widget>
  </widget>

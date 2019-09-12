@@ -13,13 +13,13 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="Background_image">
    <property name="geometry">
     <rect>
-     <x>1</x>
-     <y>0</y>
-     <width>960</width>
-     <height>540</height>
+     <x>-2</x>
+     <y>-2</y>
+     <width>964</width>
+     <height>544</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -165,7 +165,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="step_show">
    <property name="geometry">
     <rect>
      <x>730</x>
