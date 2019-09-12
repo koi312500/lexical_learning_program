@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Third_page</class>
+ <widget class="QDialog" name="Third_page">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>960</width>
+    <height>540</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>1</x>
+     <y>0</y>
+     <width>960</width>
+     <height>540</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="Background_image_qrc_file.qrc">
+     <normaloff>:/BGI_sets/Second_bgi.jpg</normaloff>:/BGI_sets/Second_bgi.jpg</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>960</width>
+     <height>540</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="show_text1">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>500</y>
+     <width>960</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>------------------------------------------------------------------------------------------------------------------------</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="show_text2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>517</y>
+     <width>480</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>에빙하우스의 망각곡선 이론을 활용한 어휘력 끝장내기 - 김건우</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="show_text3">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>517</y>
+     <width>440</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>대전교육정보원 부설영재교육원 개인주제탐구발표대회 제출작</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="enter_text">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>220</y>
+     <width>600</width>
+     <height>200</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>18</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="check_button">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>290</y>
+     <width>140</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Check</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="answer_true_false">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>445</y>
+     <width>540</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>18</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>단어를 입력해 주십시오.</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text_to_user">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>20</y>
+     <width>780</width>
+     <height>180</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>18</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>OO도 성명을 통해 “2차 가공 생산물인 막걸리, 조미료인 소금, 배달용 치킨까지 올해 안에 원산지 표시제 시행을 확대하는데 오리만 왜 내년으로 미루냐.”라며 “이번 원산지 표시제 시행 시기를 결정한 명확한 근거와 기준을 해명하라.”라고 촉구했다.</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>445</y>
+     <width>120</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>18</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Step : 1</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="Background_image_qrc_file.qrc"/>
+ </resources>
+ <connections/>
+</ui>

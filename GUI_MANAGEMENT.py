@@ -1,28 +1,83 @@
-#This control GUI part of lexical_learning_program
+#This control GUI part of lexical_learning_program with PyQt5, Qt designer.
+#To use source code, install "PyQt5" using "pip install PyQt5".
 
 
-import tkinter as tk
-from tkinter import ttk
+import sys
+from PyQt5 import *
+from PyQt5.QtWidgets import *
+from PyQt5 import uic
+from PyQt5.QAxContainer import *
+from PyQt5.QtGui import *
 
-win = tk.Tk()
+# First_page
+app = QApplication(sys.argv)
+form_class_first = uic.loadUiType("GUI_files\First_page.ui")[0]
+class First_page(QMainWindow, form_class_first):
+    def __init__(self):
+        super().__init__()
+        self.dialogs = list()
+        self.setUI()
 
-#*** first settings ***#
-#*** wallpaper - Settings ***#
-win.title("lexical_learning_program")
-win.geometry("768x432")
-wall = tk.PhotoImage(file = "pictures\wallpaper-768x432.gif")
-wall_label = tk.Label(image = wall)
-wall_label.place(x = -2, y = -2)
-#*** END ***#
+    def setUI(self):
+        self.setupUi(self)
+        self.start_button.clicked.connect(self.buttonClick)
 
-pixel = tk.PhotoImage(file='pictures\pixel.gif') # Use to change to Button size #
-#*** END ***#
+    def buttonClick(self):
+        self.close()
+
+form_class_second = uic.loadUiType("GUI_files\Second_page.ui")[0]
+class Second_page(QMainWindow, form_class_second):
+    def __init__(self):
+        super().__init__()
+        self.setUI()
+
+    def setUI(self):
+        self.setupUi(self)
+
+# Third_page
+form_class_third = uic.loadUiType("GUI_files\Third_page.ui")[0]
+selected_word = "Just_For_Declare"
+class Third_page(QMainWindow, form_class_third):
+    def __init__(self):
+        super().__init__()
+        self.setUI()
+        self.answer_true_false.setText("입력하신 단어에 오타가 존재합니다.")
+
+    def setUI(self):
+        self.setupUi(self)
+        self.check_button.clicked.connect(self.buttonClick)
+
+    def buttonClick(self):
+        if(self.enter_text.toPlainText() != selected_word):
+            self.answer_true_false.setText("입력하신 단어에 오타가 존재합니다.")
+        else:
+            self.answer_true_false.setText("Your answer is true!-check!")
 
 
-ttk.Label(win, text='').grid(column=0, row=0)
-action = tk.Button(win,text = "lexical_learning_program start",image=pixel,compound='center') # command=click_me,
-action.grid(column=150,row=150)
-action.config(width=400,height=20)
 
 
-win.mainloop()
+def Control_GUI():
+    print("Starting the lexical_learning_program!")
+    print("Do not exit this tab if you want to use the program!")
+    Start_First_GUI()
+    Start_Second_GUI()
+    Start_Third_GUI()
+
+def Start_First_GUI():
+    First_App = First_page()
+    First_App.show()
+    app.exec_()
+
+def Start_Second_GUI():
+    Second_App = Second_page()
+    Second_App.show()
+    app.exec_()
+
+def Start_Third_GUI():
+    Third_App = Third_page()
+    Third_App.show()
+    app.exec_()
+
+if __name__ == "__main__":
+    Control_GUI() #This line used for test GUI_management.py
+                  #Remove it when editing GUI_management.py is finished.

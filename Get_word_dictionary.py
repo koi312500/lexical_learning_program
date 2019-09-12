@@ -1,6 +1,8 @@
-#This code uses the API to obtain the meaning of the word and the address of the dictionary.
+#This code uses the API to get the meaning of the word and the dictionary address.
 #API provider address : https://opendict.korean.go.kr/service/openApiInfo
-#Please input your Key.key without any space or enter, etc.
+#To use the source code, enter the API code in the "Key.key file" without spaces or line breaks.
+#To use source code, install "BeautifulSoup" using "pip install BeautifulSoup".
+#To use source code, install "request" using "pip install requests".
 
 from bs4 import BeautifulSoup
 import requests
@@ -65,7 +67,3 @@ def Get_Need_Content():
     Making_URL2()
     Get_XML2()
     Found_Content2()
-
-Get_Need_Content()
-print(meaning_of_word)
-print(example_of_word)

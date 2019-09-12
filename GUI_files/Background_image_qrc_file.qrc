@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="BGI_sets">
+    <file>First_bgi.jpg</file>
+    <file>Second_bgi.jpg</file>
+  </qresource>
+</RCC>
