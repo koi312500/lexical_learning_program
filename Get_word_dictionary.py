@@ -1,8 +1,9 @@
-#This code uses the API to get the meaning of the word and the dictionary address.
-#API provider address : https://opendict.korean.go.kr/service/openApiInfo
-#To use the source code, enter the API code in the "Key.key file" without spaces or line breaks.
-#To use source code, install "BeautifulSoup" using "pip install BeautifulSoup".
-#To use source code, install "request" using "pip install requests".
+# Compile main.py to compile the whole program.
+# This code uses the API to get the meaning of the word and the dictionary address.
+# API provider address : https://opendict.korean.go.kr/service/openApiInfo
+# To use the source code, enter the API code in the "Key.key file" without spaces or line breaks.
+# To use source code, install "BeautifulSoup" using "pip install BeautifulSoup".
+# To use source code, install "request" using "pip install requests".
 
 from bs4 import BeautifulSoup
 import requests
