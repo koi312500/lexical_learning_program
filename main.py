@@ -10,7 +10,6 @@ link_to_opendict_korean = '\0'
 #SETTINGS -->
 import time
 import pygame
-import Get_word_dictionary as gc
 import GUI_management as gui
 from pygame.locals import *
 
@@ -28,20 +27,45 @@ def finished_program():
     else:
         print("End of TEST lexical level.")
     print("Exit the lexical_learning_program.")
-    exit(0)
 
 
 def Error():
-    print("Program detect the error! Exit automatically in 5 seconds")
-    exit()
+    pygame.mixer.music.stop()
+    for i in range(100):
+        print("lexical_learning_program detect the error! Exit automatically in 6 seconds")
+        time.sleep(0.01)
+    for i in range(4):
+        print("lexical_learning_program detect the error! Exit automatically in 5 seconds")
+        time.sleep(0.25)
+    for i in range(100):
+        print("lexical_learning_program detect the error! Exit automatically in 4 seconds")
+        time.sleep(0.01)
+    for i in range(4):
+        print("lexical_learning_program detect the error! Exit automatically in 3 seconds")
+        time.sleep(0.25)
+    for i in range(100):
+        print("lexical_learning_program detect the error! Exit automatically in 2 seconds")
+        time.sleep(0.01)
+    for i in range(100):
+        print("Exit the lexical_learning_program.")
+        time.sleep(0.01)
+    exit(-1)
 
 if __name__ == "__main__":
-    print("Starting the lexical_learning_program!")
-    print("Do not exit this tab if you want to use the program!")
-    print("To exit the program, use the Exit button to save the data.")
-    print("Exiting this tab will close the program and no program data will be saved.")
-    pygame.init()
-    pygame.mixer.music.load('bgm.mp3')
-    pygame.mixer.music.play(-1)
-    gui.Control_GUI()
-    finished_program()
+    try:
+        print("Starting the lexical_learning_program!")
+        print("Do not exit this tab if you want to use the program!")
+        print("To exit the program, use the Exit button to save the data.")
+        print("Exiting this tab will close the program and no program data will be saved.")
+        pygame.init()
+        pygame.mixer.music.load('Data\\bgm1.mp3')
+        pygame.mixer.music.play(-1)
+        gui.Control_First_Second_GUI()
+        pygame.mixer.music.load('Data\\bgm2.mp3')
+        pygame.mixer.music.play(-1)
+        gui.Control_Third_GUI()
+        finished_program()
+        time.sleep(5)
+        exit(0)
+    except:
+        Error()

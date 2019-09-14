@@ -37,7 +37,8 @@ class First_page(QMainWindow, form_class_first):
         self.start_button.clicked.connect(self.buttonClick)
 
     def exitf(self):
-        print("Exit the lexical_learning_program.")
+        print("After 5 seconds, lexical_learning_program exits.")
+        time.sleep(5)
         exit(0)
 
     def buttonClick(self):
@@ -65,7 +66,8 @@ class Second_page(QMainWindow, form_class_second):
         self.test_button.clicked.connect(self.button_click_test)
 
     def exitf(self):
-        print("Exit the lexical_learning_program.")
+        print("After 5 seconds, lexical_learning_program exits.")
+        time.sleep(5)
         exit(0)
 
     def button_click_e_5(self):
@@ -206,24 +208,27 @@ class Third_page(QMainWindow, form_class_third):
                 fp.write("\n")
             else:
                 fp.write(i)
-        print("Exit the lexical_learning_program.")
+        print("After 5 seconds, lexical_learning_program exits.")
         fp.close()
+        time.sleep(5)
         exit(0)
 
 # Third_page_End
 
-def Control_GUI(): # Control GUI
+def Control_First_Second_GUI(): # Control GUI
     global pass_the_stage
-    global step
-    global selected_word
-    global stage
-    global recheck_bool
     Start_First_GUI()
     check_x_button(1)
     pass_the_stage = 0
     Start_Second_GUI()
     check_x_button(2)
     pass_the_stage = 0
+
+def Control_Third_GUI():
+    global pass_the_stage
+    global step
+    global selected_word
+    global recheck_bool
     get_word_from_file()
     check_level_finished()
     selected_word = word_list[0]
@@ -235,7 +240,6 @@ def Control_GUI(): # Control GUI
         check_x_button(3)
         pass_the_stage = 0
     saving_data()
-
 
 def Start_First_GUI(): # Load First_page
     First_App = First_page()
@@ -338,10 +342,11 @@ def check_level_finished():
             print("TEST lexical level is already done.")
             print("Try different lexical level.")
             print("If you want to start this level again, copy Data_backup\data_test.dat to Data\data_test.dat")
-        print("Exit the lexical_learning_program.")
+        print("After 10 seconds, lexical_learning_program exits.")
+        time.sleep(10)
         exit(0)
 
 
 if __name__ == "__main__":
-    Control_GUI() #This line used for test GUI_management.py
-                  #Remove it when editing GUI_management.py is finished.
+    Control_First_Second_GUI() #These lines used for test GUI_management.py
+    Control_Third_GUI()        #Remove it when editing GUI_management.py is finished.
