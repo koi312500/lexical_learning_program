@@ -199,8 +199,7 @@ class Third_page(QMainWindow, form_class_third):
         global word_list
         print("Saving data...")
         print("Do not exit program! It can gets error!")
-        print("Testing exit, saving data")
-        fp = open("Data\data_user.dat","w",encoding = "UTF-8")
+        fp = open("Data\data_test.dat","w",encoding = "UTF-8")
         for i in word_list:
             if i != word_list[-1]:
                 fp.write(i)
@@ -213,7 +212,7 @@ class Third_page(QMainWindow, form_class_third):
 
 # Third_page_End
 
-def Control_GUI():
+def Control_GUI(): # Control GUI
     global pass_the_stage
     global step
     global selected_word
@@ -226,6 +225,7 @@ def Control_GUI():
     check_x_button(2)
     pass_the_stage = 0
     get_word_from_file()
+    check_level_finished()
     selected_word = word_list[0]
     gwd.Get_Need_Content(selected_word)
     while len(word_list):
@@ -234,6 +234,7 @@ def Control_GUI():
         Start_Third_GUI()
         check_x_button(3)
         pass_the_stage = 0
+    saving_data()
 
 
 def Start_First_GUI(): # Load First_page
@@ -272,16 +273,10 @@ def get_word_from_file():
     global selected_level
     if selected_level == 1:
         print("Loading elementary 6 lexical level.")
-        print("CAN NOT OPEN")
-        print("NOT MADE")
-        exit(0)
-        #p = open("Data\data_e5.dat","rt",encoding = "UTF-8")
+        fp = open("Data\data_e5.dat","rt",encoding = "UTF-8")
     elif selected_level == 2:
         print("Loading elementary 6 lexical level.")
-        print("CAN NOT OPEN")
-        print("NOT MADE")
-        exit(0)
-        #fp = open("Data\data_e6.dat","rt",encoding = "UTF-8")
+        fp = open("Data\data_e6.dat","rt",encoding = "UTF-8")
     elif selected_level == 3:
         print("Loading middle 1 lexical level.")
         fp = open("Data\data_m1.dat","rt",encoding = "UTF-8")
@@ -301,6 +296,50 @@ def get_word_from_file():
     fp.close()
     random.shuffle(word_list)
 
+def saving_data(): # Just for test level NOW
+    if selected_level == 1:
+        fp = open("Data\data_e5.dat","w",encoding = "UTF-8")
+    elif selected_level == 2:
+        fp = open("Data\data_e6.dat","w",encoding = "UTF-8")
+    elif selected_level == 3:
+        fp = open("Data\data_m1.dat","w",encoding = "UTF-8")
+    elif selected_level == 4:
+        fp = open("Data\data_m2.dat","w",encoding = "UTF-8")
+    elif selected_level == 5:
+        fp = open("Data\data_m3.dat","w",encoding = "UTF-8")
+    else:
+        fp = open("Data\data_TEST.dat","w",encoding = "UTF-8")
+    fp.close()
+
+def check_level_finished():
+    global word_list
+    if len(word_list) == 0:
+        if selected_level == 1:
+            print("Elementary 5 lexical level is already done.")
+            print("Try different lexical level.")
+            print("If you want to start this level again, copy Data_backup\data_e5.dat to Data\data_e5.dat")
+        elif selected_level == 2:
+            print("Elementary 6 lexical level is already done.")
+            print("Try different lexical level.")
+            print("If you want to start this level again, copy Data_backup\data_e6.dat to Data\data_e6.dat")
+        elif selected_level == 3:
+            print("Middle 1 lexical level is already done.")
+            print("Try different lexical level.")
+            print("If you want to start this level again, copy Data_backup\data_m1.dat to Data\data_m1.dat")
+        elif selected_level == 4:
+            print("Middle 2 lexical level is already done.")
+            print("Try different lexical level.")
+            print("If you want to start this level again, copy Data_backup\data_m2.dat to Data\data_m2.dat")
+        elif selected_level == 5:
+            print("Middle 3 lexical level is already done.")
+            print("Try different lexical level.")
+            print("If you want to start this level again, copy Data_backup\data_m3.dat to Data\data_m3.dat")
+        else:
+            print("TEST lexical level is already done.")
+            print("Try different lexical level.")
+            print("If you want to start this level again, copy Data_backup\data_test.dat to Data\data_test.dat")
+        print("Exit the lexical_learning_program.")
+        exit(0)
 
 
 if __name__ == "__main__":

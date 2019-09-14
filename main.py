@@ -38,6 +38,8 @@ def Error():
 if __name__ == "__main__":
     print("Starting the lexical_learning_program!")
     print("Do not exit this tab if you want to use the program!")
+    print("To exit the program, use the Exit button to save the data.")
+    print("Exiting this tab will close the program and no program data will be saved.")
     pygame.init()
     pygame.mixer.music.load('bgm.mp3')
     pygame.mixer.music.play(-1)
