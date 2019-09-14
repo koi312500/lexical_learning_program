@@ -1,7 +1,8 @@
 # This program's github site : https://github.com/gunwoo7/lexical_learning_program
 # Please read "README.md" first before using the source code.
-# "README.md" file contains instructions for using this source code.
+# "README.md" file contains instructions for using this program.
 # Compile this code file to compile the whole program.
+# To use source code, install "pygame" using "pip install pygame".
 
 #SETTINGS -->
 meaning_of_word = '\0'
@@ -15,22 +16,23 @@ from pygame.locals import *
 
 def finished_program():
     if gui.selected_level == 1:
-        print("초5 어휘력 단계를 마칩니다.")
+        print("End of elementary 5 lexical level.")
     elif gui.selected_level == 2:
-        print("초6 어휘력 단계를 마칩니다.")
+        print("End of elementary 6 lexical level.")
     elif gui.selected_level == 3:
-        print("중1 어휘력 단계를 마칩니다.")
+        print("End of middle 1 lexical level.")
     elif gui.selected_level == 4:
-        print("중2 어휘력 단계를 마칩니다.")
+        print("End of middle 2 lexical level.")
+    elif gui.selected_level == 5:
+        print("End of middle 3 lexical level.")
     else:
-        print("중3 어휘력 단계를 마칩니다.")
-    print("프로그램을 종료합니다.")
+        print("End of TEST lexical level.")
+    print("Exit the lexical_learning_program.")
     exit(0)
 
 
 def Error():
     print("Program detect the error! Exit automatically in 5 seconds")
-    time.sleep(5)
     exit()
 
 if __name__ == "__main__":

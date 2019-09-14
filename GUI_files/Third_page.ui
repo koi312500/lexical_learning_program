@@ -183,6 +183,19 @@
     <string>Step : 1</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="exit">
+   <property name="geometry">
+    <rect>
+     <x>890</x>
+     <y>0</y>
+     <width>70</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </widget>
  </widget>
  <resources>
   <include location="Background_image_qrc_file.qrc"/>

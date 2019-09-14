@@ -9,6 +9,7 @@ Follow these guidelines before you compile this program:
 + enter the API code in the "Key.key file" without spaces or line breaks.  
   - You can get the API code from https://opendict.korean.go.kr/service/openApiInfo .
 + install "PyQt5" using "pip install PyQt5".
++ install "pygame" using "pip install pygame".
 + Each code file contains instructions for running the code file where the instructions are written.
 
 ### I hope my code helps.

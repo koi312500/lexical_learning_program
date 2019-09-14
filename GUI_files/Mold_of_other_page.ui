@@ -81,6 +81,19 @@
     <string>대전교육정보원 부설영재교육원 개인주제탐구발표대회 제출작</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="exit">
+   <property name="geometry">
+    <rect>
+     <x>890</x>
+     <y>0</y>
+     <width>70</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </widget>
  </widget>
  <resources>
   <include location="Background_image_qrc_file.qrc"/>

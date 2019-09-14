@@ -175,7 +175,7 @@ color: rgb(85, 255, 0);</string>
   <widget class="QPushButton" name="m_3_button">
    <property name="geometry">
     <rect>
-     <x>330</x>
+     <x>120</x>
      <y>350</y>
      <width>300</width>
      <height>100</height>
@@ -188,6 +188,38 @@ color: rgb(85, 255, 0);</string>
    </property>
    <property name="text">
     <string>중등 3
+국어 어휘력</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="exit">
+   <property name="geometry">
+    <rect>
+     <x>890</x>
+     <y>0</y>
+     <width>70</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="test_button">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>350</y>
+     <width>300</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 85, 255);
+font: 25pt &quot;굴림&quot;;
+color: rgb(85, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string>Test
 국어 어휘력</string>
    </property>
   </widget>
