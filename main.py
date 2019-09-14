@@ -1,7 +1,8 @@
-# This program's github site : https://github.com/gunwoo7/lexical_learning_program
+# This project's github site : https://github.com/gunwoo7/lexical_learning_program
 # Please read "README.md" first before using the source code.
 # "README.md" file contains instructions for using this program.
-# Compile this code file to compile the whole program.
+# Compile this code file to run the whole program.
+# Compile each code file to run the file.
 # To use source code, install "pygame" using "pip install pygame".
 
 #SETTINGS -->

@@ -1,4 +1,5 @@
-# Compile main.py to compile the whole program.
+# Compile main.py to run the whole program.
+# Compile this code file to run this file
 # This code uses the API to get the meaning of the word and the dictionary address.
 # API provider address : https://opendict.korean.go.kr/service/openApiInfo
 # To use the source code, enter the API code in the "Key.key file" without spaces or line breaks.

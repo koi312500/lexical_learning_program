@@ -1,4 +1,5 @@
-# Compile main.py to compile the whole program.
+# Compile main.py to run the whole program.
+# Compile this code file to run this file
 # This control GUI part of lexical_learning_program with PyQt5, Qt designer.
 # To use source code, install "PyQt5" using "pip install PyQt5".
 
