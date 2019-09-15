@@ -100,9 +100,9 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(170, 85, 255);
+    <string notr="true">background-color: rgb(255, 0, 127);
 font: 25pt &quot;굴림&quot;;
-color: rgb(85, 255, 0);</string>
+color: rgb(0, 255, 255);</string>
    </property>
    <property name="text">
     <string>초등 5
@@ -125,9 +125,9 @@ color: rgb(85, 255, 0);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(170, 85, 255);
+    <string notr="true">background-color: rgb(255, 0, 127);
 font: 25pt &quot;굴림&quot;;
-color: rgb(85, 255, 0);</string>
+color: rgb(0, 255, 255);</string>
    </property>
    <property name="text">
     <string>초등 6
@@ -144,9 +144,9 @@ color: rgb(85, 255, 0);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(170, 85, 255);
+    <string notr="true">background-color: rgb(255, 0, 127);
 font: 25pt &quot;굴림&quot;;
-color: rgb(85, 255, 0);</string>
+color: rgb(0, 255, 255);</string>
    </property>
    <property name="text">
     <string>중등 1
@@ -163,9 +163,9 @@ color: rgb(85, 255, 0);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(170, 85, 255);
+    <string notr="true">background-color: rgb(255, 0, 127);
 font: 25pt &quot;굴림&quot;;
-color: rgb(85, 255, 0);</string>
+color: rgb(0, 255, 255);</string>
    </property>
    <property name="text">
     <string>중등 2
@@ -182,9 +182,9 @@ color: rgb(85, 255, 0);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(170, 85, 255);
+    <string notr="true">background-color: rgb(255, 0, 127);
 font: 25pt &quot;굴림&quot;;
-color: rgb(85, 255, 0);</string>
+color: rgb(0, 255, 255);</string>
    </property>
    <property name="text">
     <string>중등 3
@@ -214,9 +214,9 @@ color: rgb(85, 255, 0);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(170, 85, 255);
+    <string notr="true">background-color: rgb(255, 0, 127);
 font: 25pt &quot;굴림&quot;;
-color: rgb(85, 255, 0);</string>
+color: rgb(0, 255, 255);</string>
    </property>
    <property name="text">
     <string>Test

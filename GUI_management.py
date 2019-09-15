@@ -44,8 +44,7 @@ class First_page(QMainWindow, form_class_first):
         self.start_button.clicked.connect(self.buttonClick)
 
     def exitf(self):
-        print("After 5 seconds, lexical_learning_program exits.")
-        time.sleep(5)
+        print("Exit lexical_learning_program")
         exit(0)
 
     def buttonClick(self):
@@ -73,8 +72,7 @@ class Second_page(QMainWindow, form_class_second):
         self.test_button.clicked.connect(self.button_click_test)
 
     def exitf(self):
-        print("After 5 seconds, lexical_learning_program exits.")
-        time.sleep(5)
+        print("Exit lexical_learning_program.")
         exit(0)
 
     # Setting level function Start
@@ -234,9 +232,8 @@ class Third_page(QMainWindow, form_class_third):
                 fp.write("\n")
             else:
                 fp.write(i)
-        print("After 5 seconds, lexical_learning_program exits.")
         fp.close()
-        time.sleep(5)
+        print("Exit lexical_learning_program.")
         exit(0)
 
 # Third_page_End
@@ -302,7 +299,7 @@ def get_word_from_file(): # Data folder files loading
     global word_list
     global selected_level
     if selected_level == 1:
-        print("Loading elementary 6 lexical level.")
+        print("Loading elementary 5 lexical level.")
         fp = open("Data\data_e5.dat","rt",encoding = "UTF-8")
     elif selected_level == 2:
         print("Loading elementary 6 lexical level.")
@@ -369,7 +366,7 @@ def check_level_finished():
             print("Try different lexical level.")
             print("If you want to start this level again, copy Data_backup\data_TEST.dat to Data\data_TEST.dat")
         print("After 10 seconds, lexical_learning_program exits.")
-        time.sleep(10)
+        time.sleep(10) # User need check!
         exit(0)
 
 

@@ -3,10 +3,8 @@
 # "README.md" file contains instructions for using this program.
 # Compile this code file to run the whole program.
 # Compile each code file to run the file.
-# To use source code, install "pygame" using "pip install pygame".
 
 import time
-import pygame
 import GUI_management as gui
 from pygame.locals import *
 
@@ -24,10 +22,10 @@ def finished_program(): # Print lexical level ending sign
     else:
         print("End of TEST lexical level.")
     print("Exit the lexical_learning_program.")
+    time.sleep(5) # User need check!
 
 
 def Error(): # error processing
-    pygame.mixer.music.stop()
     for i in range(100):
         print("lexical_learning_program detect the error! Exit automatically in 6 seconds")
         time.sleep(0.01)
@@ -54,17 +52,11 @@ def main():
         print("Do not exit this tab if you want to use the program!")
         print("To exit the program, use the Exit button to save the data.")
         print("Exiting this tab will close the program and no program data will be saved.")
-        pygame.init() # BGM
-        pygame.mixer.music.load('Data\\bgm1.mp3')
-        pygame.mixer.music.play(-1)
         gui.Control_First_Second_GUI() # First Second Page
-        pygame.mixer.music.load('Data\\bgm2.mp3')
-        pygame.mixer.music.play(-1)
         gui.Control_Third_GUI() # Third Page
         finished_program() # Print lexical level ending sign
-        time.sleep(5)
         exit(0)
-    except:
+    except Exception:
         Error()
 
 main()

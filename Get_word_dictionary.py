@@ -34,7 +34,7 @@ def Making_URL2(word): # Making URL to API
 def Get_XML1(): # Get word's meaning from API
     global Content_XML1
     req = requests.get(URL1)
-    html = req.texts
+    html = req.text
     if req.status_code != 200:
         Error()
     Content_XML1 = BeautifulSoup(html,'html.parser')
