@@ -5,16 +5,12 @@
 # Compile each code file to run the file.
 # To use source code, install "pygame" using "pip install pygame".
 
-#SETTINGS -->
-meaning_of_word = '\0'
-link_to_opendict_korean = '\0'
-#SETTINGS -->
 import time
 import pygame
 import GUI_management as gui
 from pygame.locals import *
 
-def finished_program():
+def finished_program(): # Print lexical level ending sign
     if gui.selected_level == 1:
         print("End of elementary 5 lexical level.")
     elif gui.selected_level == 2:
@@ -30,7 +26,7 @@ def finished_program():
     print("Exit the lexical_learning_program.")
 
 
-def Error():
+def Error(): # error processing
     pygame.mixer.music.stop()
     for i in range(100):
         print("lexical_learning_program detect the error! Exit automatically in 6 seconds")
@@ -52,21 +48,23 @@ def Error():
         time.sleep(0.01)
     exit(-1)
 
-if __name__ == "__main__":
-    try:
+def main():
+    try: # Error processing
         print("Starting the lexical_learning_program!")
         print("Do not exit this tab if you want to use the program!")
         print("To exit the program, use the Exit button to save the data.")
         print("Exiting this tab will close the program and no program data will be saved.")
-        pygame.init()
+        pygame.init() # BGM
         pygame.mixer.music.load('Data\\bgm1.mp3')
         pygame.mixer.music.play(-1)
-        gui.Control_First_Second_GUI()
+        gui.Control_First_Second_GUI() # First Second Page
         pygame.mixer.music.load('Data\\bgm2.mp3')
         pygame.mixer.music.play(-1)
-        gui.Control_Third_GUI()
-        finished_program()
+        gui.Control_Third_GUI() # Third Page
+        finished_program() # Print lexical level ending sign
         time.sleep(5)
         exit(0)
     except:
         Error()
+
+main()
