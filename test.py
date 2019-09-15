@@ -1,3 +1,4 @@
+# Last edit date : 2019.09.15
 # This is a source code to check if a word is in the dictionary.
 
 import Get_word_dictionary as gwd

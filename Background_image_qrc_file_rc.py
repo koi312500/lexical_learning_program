@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+# Last edit date : 2019.09.15
+#
 # Resource object code
 #
 # Created by: The Resource Compiler for PyQt5 (Qt v5.13.0)

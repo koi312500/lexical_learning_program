@@ -1,3 +1,4 @@
+# Last edit date : 2019.09.15
 # Compile main.py to run the whole program.
 # Compile this code file to run this file
 # This code uses the API to get the meaning of the word and the dictionary address.

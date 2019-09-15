@@ -1,3 +1,4 @@
+# Last edit date : 2019.09.15 - compile check!
 # Compile main.py to run the whole program.
 # Compile this code file to run this file
 # This control GUI part of lexical_learning_program with PyQt5, Qt designer.
@@ -368,8 +369,3 @@ def check_level_finished():
         print("After 10 seconds, lexical_learning_program exits.")
         time.sleep(10) # User need check!
         exit(0)
-
-
-if __name__ == "__main__":
-    Control_First_Second_GUI() #These lines used for test GUI_management.py
-    Control_Third_GUI()        #Remove it when editing GUI_management.py is finished.

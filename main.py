@@ -1,3 +1,4 @@
+# Last edit date : 2019.09.15
 # This project's github site : https://github.com/gunwoo7/lexical_learning_program
 # Please read "README.md" first before using the source code.
 # "README.md" file contains instructions for using this program.
