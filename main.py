@@ -7,7 +7,6 @@
 
 import time
 import GUI_management as gui
-from pygame.locals import *
 
 def finished_program(): # Print lexical level ending sign
     if gui.selected_level == 1:

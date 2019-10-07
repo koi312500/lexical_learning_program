@@ -138,7 +138,7 @@
     </font>
    </property>
    <property name="text">
-    <string>단어를 입력해 주십시오.</string>
+    <string>단어의 뜻을 입력해 주세요.</string>
    </property>
   </widget>
   <widget class="QLabel" name="text_to_user">
@@ -156,7 +156,7 @@
     </font>
    </property>
    <property name="text">
-    <string>OO도 성명을 통해 “2차 가공 생산물인 막걸리, 조미료인 소금, 배달용 치킨까지 올해 안에 원산지 표시제 시행을 확대하는데 오리만 왜 내년으로 미루냐.”라며 “이번 원산지 표시제 시행 시기를 결정한 명확한 근거와 기준을 해명하라.”라고 촉구했다.</string>
+    <string>눈 위에 서리가 덮인다는 뜻으로, 난처한 일이나 불행한 일이 잇따라 일어남을 이르는 말.</string>
    </property>
    <property name="textFormat">
     <enum>Qt::AutoText</enum>
@@ -183,7 +183,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Step : 1</string>
+    <string>Step : 2</string>
    </property>
   </widget>
   <widget class="QPushButton" name="exit">
