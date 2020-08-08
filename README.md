@@ -1,5 +1,5 @@
 # lexical_learning_program
-### made by github user gunwoo7
+### made by github user aheui-lover3125
 This project is used for versioning lexical_learning_program and for distributing and storing code for lexical_learning_program.  
 This project is subject to the GNU General Public License v3.0. See the "license" file for more information about license.
 
