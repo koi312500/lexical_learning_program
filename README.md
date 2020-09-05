@@ -2,7 +2,7 @@
 ### made by github user aheui-lover3125
 This project is used for versioning lexical_learning_program and for distributing and storing code for lexical_learning_program.  
 This project is subject to the GNU General Public License v3.0. See the "license" file for more information about license.  
-This project is archived at 2020-09-05 in UTC+9(KR/Seoul). If you wants to change source code, please Pull request to my project.
+This project is archived at 2020-09-05 in UTC+9(KR/Seoul). If you wants to change source code, please contact to me at Discord AKMU_LOVE#4211.
 
 Follow these instructions before you compile this program:
 + Install "BeautifulSoup" using "pip install BeautifulSoup".  
