@@ -14,7 +14,6 @@ from PyQt5.QtWidgets import *
 from PyQt5 import uic
 from PyQt5.QAxContainer import *
 from PyQt5.QtGui import *
-import Get_word_dictionary as gwd
 
 # Import part End
 
@@ -23,11 +22,33 @@ import Get_word_dictionary as gwd
 app = QApplication(sys.argv)
 pass_the_stage = 0
 selected_level = 0
-selected_word = "  "
+selected_word = []
 now_check_word = "\0"
 stage = 1
 step = 0
 word_list = []
+sentence_list = []
+
+def Error(): # error processing
+    for i in range(100):
+        print("lexical_learning_program detect the error! Exit automatically in 6 seconds")
+        time.sleep(0.01)
+    for i in range(4):
+        print("lexical_learning_program detect the error! Exit automatically in 5 seconds")
+        time.sleep(0.25)
+    for i in range(100):
+        print("lexical_learning_program detect the error! Exit automatically in 4 seconds")
+        time.sleep(0.01)
+    for i in range(4):
+        print("lexical_learning_program detect the error! Exit automatically in 3 seconds")
+        time.sleep(0.25)
+    for i in range(100):
+        print("lexical_learning_program detect the error! Exit automatically in 2 seconds")
+        time.sleep(0.01)
+    for i in range(100):
+        print("Exit the lexical_learning_program.")
+        time.sleep(0.01)
+    exit(-1)
 
 # Varible declare Start
 
@@ -78,38 +99,33 @@ class Second_page(QMainWindow, form_class_second):
 
     # Setting level function Start
     def button_click_e_5(self):
-        global selected_level
-        global pass_the_stage
-        selected_level = 1
-        pass_the_stage = 1
+        print("This is not allowed by KOI3125.")
+        time.sleep(5)
+        Error()
         self.close()
 
     def button_click_e_6(self):
-        global selected_level
-        global pass_the_stage
-        selected_level = 2
-        pass_the_stage = 1
+        print("This is not allowed by KOI3125.")
+        time.sleep(5)
+        Error()
         self.close()
 
     def button_click_m_1(self):
-        global selected_level
-        global pass_the_stage
-        selected_level = 3
-        pass_the_stage = 1
+        print("This is not allowed by KOI3125.")
+        time.sleep(5)
+        Error()
         self.close()
 
     def button_click_m_2(self):
-        global selected_level
-        global pass_the_stage
-        selected_level = 4
-        pass_the_stage = 1
+        print("This is not allowed by KOI3125.")
+        time.sleep(5)
+        Error()
         self.close()
 
     def button_click_m_3(self):
-        global selected_level
-        global pass_the_stage
-        selected_level = 5
-        pass_the_stage = 1
+        print("This is not allowed by KOI3125.")
+        time.sleep(5)
+        Error()
         self.close()
 
     def button_click_test(self):
@@ -138,21 +154,9 @@ class Third_page(QMainWindow, form_class_third):
         global step
         if step == 1: # Word step
             now_check_word = selected_word
-            self.text_to_user.setText(now_check_word)
+            self.text_to_user.setText(selected_word[1])
             self.answer_true_false.setText("단어를 입력해 주세요.")
-            self.step_show.setText("Step : 1")
-            self.enter_text.setText("")
-        if step == 2: # Word's meaning step
-            now_check_word = gwd.meaning_of_word
-            self.text_to_user.setText(now_check_word)
-            self.answer_true_false.setText("단어의 뜻을 입력해 주세요.")
-            self.step_show.setText("Step : 2")
-            self.enter_text.setText("")
-        if step == 3: # Word's example step
-            now_check_word = gwd.example_of_word
-            self.text_to_user.setText(now_check_word)
-            self.answer_true_false.setText("단어의 예문을 입력해 주세요.")
-            self.step_show.setText("Step : 3")
+            self.step_show.setText("Step : NULL")
             self.enter_text.setText("")
 
         self.exit.clicked.connect(self.exitf) # Exit button connect
@@ -166,7 +170,7 @@ class Third_page(QMainWindow, form_class_third):
         print(now_check_word)
 
         # Next step or next word
-        if(self.enter_text.toPlainText() != now_check_word ):
+        if(self.enter_text.toPlainText() != now_check_word[0]):
             # Typing Error - Show comment
             if step == 1:
                 recheck_bool = recheck_bool + 1
@@ -181,22 +185,6 @@ class Third_page(QMainWindow, form_class_third):
         else:
             # Typing Correct - Next step & word
             if step == 1: # First step -> Second step
-                step = 2
-                now_check_word = gwd.meaning_of_word
-                self.text_to_user.setText(now_check_word)
-                self.answer_true_false.setText("단어의 뜻을 입력해 주세요.")
-                self.step_show.setText("Step : 2")
-                self.enter_text.setText("")
-                return
-            if step == 2: # Second step -> Third step
-                step = 3
-                now_check_word = gwd.example_of_word
-                self.text_to_user.setText(now_check_word)
-                self.answer_true_false.setText("단어의 예문을 입력해 주세요.")
-                self.step_show.setText("Step : 3")
-                self.enter_text.setText("")
-                return
-            if step == 3: # Next word
                 global pass_the_stage
                 global selected_word
                 global word_list
@@ -204,36 +192,29 @@ class Third_page(QMainWindow, form_class_third):
                 if recheck_bool != 0: # Typing error
                     word_list.append(word_list.pop(0)) # Move content to end of list
                 else: # No typing error
-                    word_list.pop(0) # remove the word
+                    random.shuffle(word_list)
                 if len(word_list) != 0: # Next word
                     selected_word = word_list[0] # Selected_word = next word
-                    gwd.Get_Need_Content(selected_word) # Getting word info
                 self.close()
 
     def exitf(self): # Just_for_Test_level
         global word_list
         print("Saving data...")
         print("Do not exit program! It can gets error!")
-        if selected_level == 1: # Using in
-            fp = open("Data\data_e5.dat","w",encoding = "UTF-8")
-        elif selected_level == 2:
-            fp = open("Data\data_e6.dat","w",encoding = "UTF-8")
-        elif selected_level == 3:
-            fp = open("Data\data_m1.dat","w",encoding = "UTF-8")
-        elif selected_level == 4:
-            fp = open("Data\data_m2.dat","w",encoding = "UTF-8")
-        elif selected_level == 5:
-            fp = open("Data\data_m3.dat","w",encoding = "UTF-8")
-        else:
-            fp = open("Data\data_TEST.dat","w",encoding = "UTF-8")
+        fp1 = open("Data\data_TEST.dat","w",encoding = "UTF-8")
+        fp2 = open("Data\data_TEST_ans.dat", "w", encoding= "UTF-8")
 
         for i in word_list:
             if i != word_list[-1]:
-                fp.write(i)
-                fp.write("\n")
+                fp1.write(i[0])
+                fp1.write("\n")
+                fp2.write(i[1])
+                fp2.write("\n")
             else:
-                fp.write(i)
-        fp.close()
+                fp1.write(i[0])
+                fp2.write(i[1])
+        fp1.close()
+        fp2.close()
         print("Exit lexical_learning_program.")
         exit(0)
 
@@ -256,7 +237,6 @@ def Control_Third_GUI(): # Control Third page GUI
     get_word_from_file()
     check_level_finished()
     selected_word = word_list[0]
-    gwd.Get_Need_Content(selected_word) # Get word info
     while len(word_list): # Run when word_list have element
         recheck_bool = 0
         step = 1
@@ -299,44 +279,27 @@ def check_x_button(stage): # Click "X" button isn't allowed.
 def get_word_from_file(): # Data folder files loading
     global word_list
     global selected_level
-    if selected_level == 1:
-        print("Loading elementary 5 lexical level.")
-        fp = open("Data\data_e5.dat","rt",encoding = "UTF-8")
-    elif selected_level == 2:
-        print("Loading elementary 6 lexical level.")
-        fp = open("Data\data_e6.dat","rt",encoding = "UTF-8")
-    elif selected_level == 3:
-        print("Loading middle 1 lexical level.")
-        fp = open("Data\data_m1.dat","rt",encoding = "UTF-8")
-    elif selected_level == 4:
-        print("Loading middle 2 lexical level.")
-        fp = open("Data\data_m2.dat","rt",encoding = "UTF-8")
-    elif selected_level == 5:
-        print("Loading middle 3 lexical level.")
-        fp = open("Data\data_m3.dat","rt",encoding = "UTF-8")
-    else:
-        print("Loading TEST lexical level.")
-        fp = open("Data\data_TEST.dat","rt",encoding = "UTF-8")
 
-    word_list = fp.readlines()
-    for i in range(len(word_list)-1): # Remove word_list's content's line feed.
-        word_list[i] = word_list[i][:len(word_list[i])-1]
-    fp.close()
+    print("Loading TEST'_ans lexical level.")
+    fp1 = open("Data\data_TEST_ans.dat","rt",encoding = "UTF-8")
+    
+    print("Loading TEST lexical level.")
+    fp2 = open("Data\data_TEST.dat","rt",encoding = "UTF-8")
+
+    word_list1 = fp1.readlines()
+    sentence_list1 = fp2.readlines()
+    print(word_list1)
+    print(sentence_list1)
+    for i in range(len(word_list1)): # Remove word_list's content's line feed.
+        word_list.append([word_list1[i][:len(word_list1[i])-1], sentence_list1[i][:len(sentence_list1[i]) - 1]])
+    fp1.close()
+    fp2.close()
     random.shuffle(word_list) # Mix the list
+    print(word_list)
 
 def saving_data():          # Save data with blank
-    if selected_level == 1: # Using in
-        fp = open("Data\data_e5.dat","w",encoding = "UTF-8")
-    elif selected_level == 2:
-        fp = open("Data\data_e6.dat","w",encoding = "UTF-8")
-    elif selected_level == 3:
-        fp = open("Data\data_m1.dat","w",encoding = "UTF-8")
-    elif selected_level == 4:
-        fp = open("Data\data_m2.dat","w",encoding = "UTF-8")
-    elif selected_level == 5:
-        fp = open("Data\data_m3.dat","w",encoding = "UTF-8")
-    else:
-        fp = open("Data\data_TEST.dat","w",encoding = "UTF-8")
+    fp = open("Data\data_TEST.dat","w",encoding = "UTF-8")
+    fp = open("Data\data_TEST_ans.dat", "w", encoding = "UTF-8")
     fp.close()
 
 def check_level_finished():
