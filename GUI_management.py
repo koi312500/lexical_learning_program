@@ -201,20 +201,6 @@ class Third_page(QMainWindow, form_class_third):
         global word_list
         print("Saving data...")
         print("Do not exit program! It can gets error!")
-        fp1 = open("Data\data_TEST.dat","w",encoding = "UTF-8")
-        fp2 = open("Data\data_TEST_ans.dat", "w", encoding= "UTF-8")
-
-        for i in word_list:
-            if i != word_list[-1]:
-                fp1.write(i[0])
-                fp1.write("\n")
-                fp2.write(i[1])
-                fp2.write("\n")
-            else:
-                fp1.write(i[0])
-                fp2.write(i[1])
-        fp1.close()
-        fp2.close()
         print("Exit lexical_learning_program.")
         exit(0)
 
@@ -279,28 +265,21 @@ def check_x_button(stage): # Click "X" button isn't allowed.
 def get_word_from_file(): # Data folder files loading
     global word_list
     global selected_level
-
-    print("Loading TEST'_ans lexical level.")
-    fp1 = open("Data\data_TEST_ans.dat","rt",encoding = "UTF-8")
     
     print("Loading TEST lexical level.")
-    fp2 = open("Data\data_TEST.dat","rt",encoding = "UTF-8")
+    fp = open("Data\data_TEST.dat","r",encoding = "UTF-8")
 
-    word_list1 = fp1.readlines()
-    sentence_list1 = fp2.readlines()
-    print(word_list1)
-    print(sentence_list1)
-    for i in range(len(word_list1)): # Remove word_list's content's line feed.
-        word_list.append([word_list1[i][:len(word_list1[i])-1], sentence_list1[i][:len(sentence_list1[i]) - 1]])
-    fp1.close()
-    fp2.close()
+    tmp_list = fp.readlines()
+    for i in range(len(tmp_list)): # Remove word_list's conten`t's line feed.
+        word_list1 = tmp_list[i].split(sep = ' ', maxsplit = 2)
+        print(word_list1)
+        word_list.append([word_list1[1], word_list1[2][:len(word_list1[2]) - 1]])
+    fp.close()
     random.shuffle(word_list) # Mix the list
-    print(word_list)
+    print(word_list[0])
 
 def saving_data():          # Save data with blank
-    fp = open("Data\data_TEST.dat","w",encoding = "UTF-8")
-    fp = open("Data\data_TEST_ans.dat", "w", encoding = "UTF-8")
-    fp.close()
+    print("Data didn't changed.")
 
 def check_level_finished():
     global word_list
